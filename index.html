@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../Carwash/css/bootstrap.css">
+    <link rel="stylesheet" href="../Carwash/css/estilos.css">
+    
+  </head>
+  <body>
+      <section id="cover">
+          <div id="cover-texto">
+              <div class="container">
+                <div class="row"><div>
+                    <div class="col-sm-12">
+                        <h1 class="display-3">Car wash</h1>
+                        <p>Bienvenido</p>                        
+                    </div>
+                </div>
+              </div>
+          </div>
+      </section>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" data-toggle="modal" data-target="#exampleModal">Consulta Vehiculo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" data-toggle="modal" data-target="#exampleModal1">Acceso Empleados</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--<ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Acceso Empleados<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>-->
+        </div>
+      </nav>
+
+      <!-- Modal Consulta vehiculos-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Consulta Vehiculo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Placa:</label>
+            <input type="text" id="Placa_veh" class="form-control" placeholder="" value="" readonly>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Orden de servicio:</label>
+            <input type="number" id="Id_ordserv" class="form-control" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Nombre de servicio:</label>
+            <input type="text" id="Nom_serv" class="form-control" placeholder="" value="" readonly>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label>Status de servicio:</label>
+            <input type="text" id="Status" class="form-control" placeholder="" value="" readonly>
+          </div>
+        </div>
+        
+        </div>     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="ConsultarProducto" class="btn btn-primary">Consultar</button>
+        <button type="button" id="LimpiarProducto" class="btn btn-primary">Limpiar</button>
+    </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Modal Ingreso empleados-->
+ <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Acceso Empleados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+  
+  
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label>Usuario:</label>
+              <input type="text" id="userTrab" class="form-control" placeholder="">
+            </div>
+          </div>
+  
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label>Contraseña:</label>
+              <input type="text" id="passTrab" class="form-control" placeholder="">
+            </div>
+          </div>          
+          </div>        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="Ingresar" class="btn btn-primary">Ingresar</button>
+          <button type="button" id="LimpiarProducto1" class="btn btn-primary">Limpiar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Modal Registrar Usuario-->
+      <!--<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel2">Registrar Usuario</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label>Nombre:</label>
+                  <input type="text" id="Nombre" class="form-control" placeholder="">
+                </div>
+              </div>
+      
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label>ID:</label>
+                  <input type="number" id="ID" class="form-control" placeholder="">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>-->
+
+<div id="capa">
+      <section id="carouselH">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../Carwash/img/imagen1.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="../Carwash/img/imagen2.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="../Carwash/img/imagen3.jpg" class="d-block w-100" alt="">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </section>
+  </div>
+    <section id="Empresa">
+
+        <div class= "contenido-seccion">
+
+            <div class="container">
+                <h2>Acerca de </h2>
+                <p class="lead">clases personalizadas</p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-group">
+                            <div class="card">
+                              <img src="img/imagen1.jpg" class="card-img-top" alt="java">
+                              <div class="card-body">
+                                <h5 class="card-title">conoce mas de java</h5>
+                                <p class="card-text">Java es un lenguaje de programación y una plataforma 
+                                  informática comercializada por primera vez en 1995 por Sun Microsystems.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="myModal">ver más</button>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="img/imagen2.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img src="img/imagen3.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              </div>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias">
+      <div class="contenido-seccion">
+        <div class="container">
+          <div class="col-md-6">
+            <div class="texto-acerca-de">
+              <h3>Acerca de ADSI</h3>
+              <p class="lead">
+                El programa Tecnólogo en Análisis y Desarrollo de Sistemas de Información
+                 se creó para brindar al sector productivo nacional en general 
+              </p>
+              <p>debido a que la Industria del Software aplica para la mejora de los procesos productivos en todos los sectores ya sea 
+                industria, comercio, servicios, sector primario y extractivo</p>
+                <h3>Sigueme</h3>
+                <a href="" class="btn btn-outline-light">facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"> </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+
+        //programar evento clic boton RegistrarProducto
+        $('#RegistrarProducto').click(function() { 
+         let registro=recuperarDatosProducto();
+         agregarRegistro(registro);
+
+         limpiarDatosProducto();
+          $('#exampleModal').modal('hide'); //cerrar ventana modal 
+             
+           alert("Se registró producto. Precio :"+registro.precio); 
+        });
+
+        //programar evento clic boton consultarProducto
+        $('#ConsultarProducto').click(function() { 
+         let registro=recuperarDatosProducto();
+          let idproducto=registro.id_ordserv;
+         recuperarRegistro(idproducto);
+        });
+
+           //programar evento clic boton ingresar
+          $('#Ingresar').click(function() { 
+         let registro=ingresarEmpleado();
+          let idproducto=registro.User_trab;
+         accesoEmpleado(idproducto);
+        });
+
+        //programar evento clic boton ModificarProducto
+        $('#ModificarProducto').click(function() { 
+         let registro=recuperarDatosProducto();
+         ModificarRegistro(registro);
+
+         limpiarDatosProducto();
+          $('#exampleModal').modal('hide'); //cerrar ventana modal 
+             
+           alert("Se modificó el  producto con id:"+registro.idproducto); 
+        });
+
+        //programar evento clic boton EliminarProducto
+ $('#EliminarProducto').click(function() { 
+         let registro=recuperarDatosProducto();
+          let idproducto=registro.idproducto;
+          EliminarRegistro(idproducto);
+          limpiarDatosProducto();
+          $('#exampleModal').modal('hide'); //cerrar ventana modal 
+             
+           alert("Eliminó el producto con id:"+registro.idproducto); 
+
+        });
+
+        $('#LimpiarProducto').click(function() {         
+
+         limpiarDatosProducto(); 
+        });
+
+        $('#LimpiarProducto1').click(function() {         
+
+        limpiarDatosProducto(); 
+        });
+
+
+
+//recuperar datos 
+function recuperarDatosProducto() {
+          let registro = {            
+            id_ordserv: $('#Id_ordserv').val(),
+            status: $('#Status').val(),
+            nom_serv: $('#Nom_serv').val(),            
+            placa_veh: $('#Placa_veh').val(),
+          };
+          return registro;
+        }
+
+//recuperar datos 
+function ingresarEmpleado() {
+          let registro = { 
+            userTrab: $('#User_trab').val,
+            passTrab: $('#Pass_trab').val,
+          };
+          return registro;
+        }        
+
+// funciones limpiar registro producto
+function limpiarDatosProducto() {    
+          $('#User_trab').val('');
+          $('#Pass_trab').val('');
+          $('#Placa_veh').val('');
+          $('#Id_ordserv').val('');
+          $('#Nom_serv').val('');
+          $('#Status').val('');
+        }
+
+// funciones para comunicarse con el servidor via ajax
+function agregarRegistro(registro) {
+  alert(" Estamos en agregar registro");
+  $.ajax({
+            type: 'POST',
+            url: 'CRUDProducto.php?accion=agregar',
+            data: registro,
+            success: function(msg) {
+              //var data = JSON.parse(msg);
+              alert(" Producto creado");
+            },
+            error: function() {
+              alert("Hay un problema");
+            }
+          });
+        }
+
+        function recuperarRegistro(idproducto) {
+          alert(idproducto);
+          $.ajax({
+            type: 'GET',
+            url: 'CRUDProducto.php?accion=consultar&id=' + idproducto,
+            data: '',
+            success: function(datos) {              
+              if (datos!=""){ 
+              alert (datos);           
+              //alert (datos[0].Status);
+              //alert (datos[0].Nom_serv);
+              //alert (datos[0].Placa_veh);          
+              $('#Id_ordserv').val(datos[0].Id_ordserv);
+              $('#Status').val(datos[0].Status);
+              $('#Nom_serv').val(datos[0].Nom_serv);             
+              $('#Placa_veh').val(datos[0].Placa_veh);
+             // $("#FormularioAlumnos").modal('show');
+              }
+              else
+              {
+                alert ("La orden de servicio no fue encontrada, ingrese otra");
+              }
+            },
+            error: function() {
+              alert("Hay un problema");
+            }
+          });
+        }
+
+
+        function accesoEmpleado(idproducto) {
+          alert(idproducto);
+          $.ajax({
+            type: 'GET',
+            url: 'CRUDProducto.php?accion=ingresar&id=' + idproducto,
+            data: '',
+            success: function(datos) {              
+              if (datos!=""){ 
+              //alert (datos);           
+              alert (datos[0].Nom_trab);
+              alert (datos[0].idRol);
+              //alert (datos[0].Placa_veh);          
+              //$('#Id_ordserv').val(datos[0].Id_ordserv);
+              //$('#Status').val(datos[0].Status);
+              //$('#Nom_serv').val(datos[0].Nom_serv);             
+              //$('#Placa_veh').val(datos[0].Placa_veh);
+             // $("#FormularioAlumnos").modal('show');
+              }
+              else
+              {
+                alert ("Usuario no encontrado. Datos incorrectos");
+              }
+            },
+            error: function() {
+              alert("Hay un problema");
+            }
+          });
+        }
+
+// funciones para modificar
+function ModificarRegistro(registro) {
+ 
+ $.ajax({
+           type: 'POST',
+           url: 'CRUDProducto.php?accion=modificar&id=' + registro.idproducto,
+           data: registro,
+           success: function(msg) {
+             //var data = JSON.parse(msg);
+             alert(" producto Modificado");
+           },
+           error: function() {
+             alert("problema en el modificar");
+           }
+         });
+       }
+
+       // funciones para eliminar
+       function EliminarRegistro(idproducto) {
+         // alert(" estamos en recuperar registro");
+          $.ajax({
+            type: 'GET',
+            url: 'CRUDProducto.php?accion=borrar&id=' + idproducto,
+            data: '',
+            success: function(datos) {
+              alert(" producto eliminado");
+            },
+            error: function() {
+              alert("problema en eliminar");
+            }
+          });
+        }
+    });
+    </script>
+
+  </body>
+</html>
